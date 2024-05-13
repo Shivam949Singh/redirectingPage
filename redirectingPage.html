@@ -1,11 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Blank Page</title>
-</head>
-<body>
-    <h1>You are being redirected</h1>
-</body>
+  </head>
+  <body>
+    <h1>Successfully Authenticated</h1>
+    <p>Please click <a href={obj}>here</a> to go back</p>
+
+    <script>
+        const obj = "www.google.com";
+        JSON.parse(localStorage.getItem('key'))
+        console.log("the url recieved ==---> ", obj);
+    </script>
+  </body>
 </html>
