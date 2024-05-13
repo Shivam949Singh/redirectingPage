@@ -10,9 +10,18 @@
     <p>Please click <a href={obj}>here</a> to go back</p>
 
     <script>
-        const obj = "www.google.com";
-        JSON.parse(localStorage.getItem('key'))
-        console.log("the url recieved ==---> ", obj);
+        const obj = "";
+      
+        window.addEventListener('storage', function (event) {
+        if (event.key === 'url') {
+          console.log(event.value); // logs "Hello from Tab 1!"
+          console.log("value of url", url); 
+          obj = url;
+        }
+        });
+      
+        // JSON.parse(localStorage.getItem('key'))
+        // console.log("the url recieved ==---> ", obj);
     </script>
   </body>
 </html>
